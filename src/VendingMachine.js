@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./VendingMachine.css";
+import Message from "./Message";
+import { Link } from "react-router-dom";
 import vendingMachineImg from "./VendingMachine.png";
 
 class VendingMachine extends Component {
@@ -9,7 +11,20 @@ class VendingMachine extends Component {
         className="VendingMachine"
         style={{ backgroundImage: `url(${vendingMachineImg})` }}
       >
-        <h1>Vending Machine</h1>
+        <Message>
+          <h1>Vending Machine</h1>
+        </Message>
+        <Message>
+          <Link exact to="/soda">
+            Soda
+          </Link>
+          <Link exact to="/chips">
+            Chips
+          </Link>
+          <Link exact to="/sardines">
+            Sardines
+          </Link>
+        </Message>
       </div>
     );
   }

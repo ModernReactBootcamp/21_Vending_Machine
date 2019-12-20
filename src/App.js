@@ -4,11 +4,13 @@ import VendingMachine from "./VendingMachine";
 import Chips from "./Chips";
 import Sardines from "./Sardines";
 import Soda from "./Soda";
+import Navbar from "./Navbar";
 import { Route, Switch } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
+      <Navbar />
       <Switch>
         <Route exact path="/" render={() => <VendingMachine />} />
         <Route exact path="/soda" render={() => <Soda />} />
